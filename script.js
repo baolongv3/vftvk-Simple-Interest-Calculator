@@ -10,9 +10,9 @@ function compute() {
         return;
     }
 
-    document.getElementById('result').innerText = `\n If you deposit ${p} \n at an interest rate of ${rate}% \n You will receive an amount of ${interest} \n in the year of ${year}`;
+    document.getElementById('result').innerText = `\n If you deposit <mark>${p}</mark> \n at an interest rate of <mark> ${rate}% </mark>\n You will receive an amount of  <mark> ${interest} </mark>\n in the year of <mark> ${year} </mark>`;
 }
 function updateRate() {
     var rateval = document.getElementById("rate").value;
-    document.getElementById("rate_val").innerText = rateval;
+    document.getElementById("rate_val").innerText = rateval + '%';
 }
