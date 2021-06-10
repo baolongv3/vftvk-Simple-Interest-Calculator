@@ -10,7 +10,7 @@ function compute() {
         return;
     }
 
-    document.getElementById('result').innerText = `\n If you deposit <mark>${p}</mark> \n at an interest rate of <mark> ${rate}% </mark>\n You will receive an amount of  <mark> ${interest} </mark>\n in the year of <mark> ${year} </mark>`;
+    document.getElementById('result').innerHTML = `<br/> If you deposit <mark>${p}$<\/mark> <br/> at an interest rate of <mark> ${rate}% <\/mark><br/> You will receive an amount of  <mark> ${interest} <\/mark><br/> in the year of <mark> ${year} <\/mark>`;
 }
 function updateRate() {
     var rateval = document.getElementById("rate").value;
