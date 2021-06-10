@@ -1,6 +1,18 @@
-function compute()
-{
-    p = document.getElementById("principal").value;
-    
+function compute() {
+    var p = document.getElementById("principal").value;
+    var rate = document.getElementById("rate").value;
+    var years = document.getElementById("years").value;
+    var interest = p * rate * years / 100;
+    var year = new Date().getFullYear() + parseInt(years);
+    if(p <= 0){
+        alert('Please input a positive number');
+        document.getElementById("principal").focus();
+        return;
+    }
+
+    document.getElementById('result').innerText = `\n If you deposit ${p} \n at an interest rate of ${rate}% \n You will receive an amount of ${interest} \n in the year of ${year}`;
 }
-        
+function updateRate() {
+    var rateval = document.getElementById("rate").value;
+    document.getElementById("rate_val").innerText = rateval;
+}
